@@ -63,9 +63,9 @@ alias aws="podman run --privileged --rm -it --entrypoint aws \
 --env AWS_RETRY_MODE \
 --env AWS_EC2_METADATA_DISABLED \
 --env AWS_SDK_UA_APP_ID \
-localhost/kloud-cli:latest $@"
+ghcr.io/alexstorm1313/kloud-cli:latest $@"
 # Bash completion
-complete -C "podman run --rm -i --entrypoint aws_completer --env COMP_LINE --env COMP_POINT localhost/kloud-cli:latest $@" aws
+complete -C "podman run --rm -i --entrypoint aws_completer --env COMP_LINE --env COMP_POINT ghcr.io/alexstorm1313/kloud-cli:latest $@" aws
 ```
 
 #### Azure CLI
@@ -111,9 +111,9 @@ alias tofu="podman run --privileged --rm -it --entrypoint tofu \
 --env AWS_RETRY_MODE \
 --env AWS_EC2_METADATA_DISABLED \
 --env AWS_SDK_UA_APP_ID \
-localhost/kloud-cli:latest $@"
+ghcr.io/alexstorm1313/kloud-cli:latest $@"
 # Bash completion
-complete -C "podman run --rm -i --entrypoint tofu --env COMP_LINE --env COMP_POINT localhost/kloud-cli:latest $@" tofu
+complete -C "podman run --rm -i --entrypoint tofu --env COMP_LINE --env COMP_POINT ghcr.io/alexstorm1313/kloud-cli:latest $@" tofu
 ```
 
 After adding these lines, restart your shell or run `source ~/.bashrc` (or equivalent) to apply the changes.
